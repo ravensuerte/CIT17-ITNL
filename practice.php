@@ -53,6 +53,13 @@ if (3 == 2 + 1)
 print("Good - I haven't totally");
 print("lost my mind.<br>");
 }
+print("<br> print a variable <br>");
+
+$int_var = 12345;
+print($int_var);
+print("<br>  print another variable <br>");
+$another_int = -12345 + 12345;
+print($another_int)
 ?>
 
 </body>
