@@ -5,31 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variabletype</title>
+    <h1>04_Variables</h1>
 </head>
 <body>
     <style>
+        h1 ,h3{
+            color:blue;
+        }
         body{
             background-color: black;
             color: white;
             text-align: center;
         }
     </style>
+    <h3>INTEGERS</h3>
     <?php
-    print("Integers <br>");
+    
     $int_var = 12345;
     print("<br>");
     print("$int_var");
     print("<br>");
     $another_int = -12345 + 12345;
     print("$another_int");
-    print("<br> Doubles");
+     ?>
+     <h3>DOUBLE</h3>
+     <?php   
+    
     $many = 2.2888800;
     $many_2 = 2.2111200;
     $few = $many + $many_2;
     print("<br>"); 
     print($many + $many_2 = $few);
     print("<br>");
-    print("bollean type <br>");
+
+    ?>
+    <h3>BOLEAN</h3>
+    <?php
+    
     if (TRUE)
         print("This will always print<br>");
     else
@@ -43,6 +55,9 @@
         $false_num = 999 - 999;
         $false_str = "";
         print("<br>");
+        ?>
+        <h3>STRING</h3>
+        <?php
         $string_1 = "This is a string in double quotes";
         print("<br>");
         print($string_1);
