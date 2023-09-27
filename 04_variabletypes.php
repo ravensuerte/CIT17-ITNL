@@ -9,6 +9,8 @@
 <body>
     <style>
         body{
+            background-color: black;
+            color: white;
             text-align: center;
         }
     </style>
