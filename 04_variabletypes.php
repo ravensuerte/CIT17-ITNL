@@ -7,6 +7,11 @@
     <title>Variabletype</title>
 </head>
 <body>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
     <?php
     print("Integers <br>");
     $int_var = 12345;
@@ -35,8 +40,27 @@
         $false_null = NULL;
         $false_num = 999 - 999;
         $false_str = "";
+        print("<br>");
+        $string_1 = "This is a string in double quotes";
+        print("<br>");
+        print($string_1);
+        $string_2 = "This is a somewhat longer, singly quoted string";
+        print("<br>");
+        print($string_2);
+        $string_39 = "This string has thirty-nine characters";
+        print("<br>");
+        print($string_39);
+        print("<br>");
+        $string_0 = ""; // a string with zero characters
+        $variable = "name";
+    $literally = 'My $variable will not print!<br> ';
+        print($literally);
+        print("<br>");
+    $literally = "My $variable will print!<br>";
+        print($literally);
+        print("<br>");
 
-        
+
     ?>
 </body>
 </html>
