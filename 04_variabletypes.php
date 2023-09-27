@@ -19,7 +19,7 @@
     $many = 2.2888800;
     $many_2 = 2.2111200;
     $few = $many + $many_2;
-    print("<br>");
+    print("<br>"); 
     print($many + $many_2 = $few);
     print("<br>");
     print("bollean type <br>");
