@@ -9,6 +9,9 @@
 </head>
 <body>
     <style>
+        h5{ 
+            color: red;
+        }
         h1 ,h3{
             color:blue;
         }
@@ -19,60 +22,119 @@
         }
     </style>
     <h3>INTEGERS</h3>
-    <?php
-    
+    <p>
+    $int_var = 12345;<br>
+    $another_int = -12345 + 12345;
+    <h5>OUTPUT</h5>
+    <?php 
     $int_var = 12345;
-    print("<br>");
     print("$int_var");
     print("<br>");
     $another_int = -12345 + 12345;
     print("$another_int");
      ?>
+    </p>
+   
+     
      <h3>DOUBLE</h3>
+     <p>
+     $many = 2.2888800;<br>
+     $many_2 = 2.2111200;<br>
+     $few = $many + $many_2;<br>
+     print("$many + $many_2 = $few");<br>
+     <h5>OUTPUT</h5>
      <?php   
-    
     $many = 2.2888800;
-    $many_2 = 2.2111200;
-    $few = $many + $many_2;
-    print("<br>"); 
-    print($many + $many_2 = $few);
+    print("$many");
     print("<br>");
-
+    $many_2 = 2.2111200;
+    print("$many_2");
+    print("<br>");
+    $few = $many + $many_2;
+    print("$many + $many_2 = $few<br>");
     ?>
+     </p>
+     
     <h3>BOLEAN</h3>
+    <p>First Example:<br>
+    if (TRUE)<br>
+        print("This will always print");<br>
+    else<br>
+        print("This will never print");<br>
+    <h5>OUTPUT</h5>
     <?php
-    
     if (TRUE)
         print("This will always print<br>");
     else
         print("This will never print<br>");
-
+    ?>
+    </p>
+    
+    <p>2nd Example:<br>
+    $true_num = 3 + 0.14159;<br>
+        $true_str = "Tried and true"<br>
+        $true_array[49] = "An array element";<br>
+        $false_array = array();<br>
+        $false_null = NULL;<br>
+        $false_num = 999 - 999;<br>
+        $false_str = "";
+        <h5>OUTPUT</h5>
+    <?php
         $true_num = 3 + 0.14159;
+        print("$true_num");
+        print("<br>");
         $true_str = "Tried and true";
+        print"$true_str";
+        print("<br>");
         $true_array[49] = "An array element";
+        print("$true_array[49]");
+        print("<br>");
         $false_array = array();
         $false_null = NULL;
+        print("$false_null");
+        print("<br>");
         $false_num = 999 - 999;
+        print"$false_num";
+        print("<br>");
         $false_str = "";
+        print"$false_str";
         print("<br>");
-        ?>
+    ?>
+    </p>
+    <h3>NULL</h3>
+    <p>
+    $my_var = NULL;<br>
+    $my_var = nulULL;
+    <h5>OUTPUT:</h5>
+    <?php
+    $my_var = NULL;
+    print("$my_var");
+    print("<br>");
+    $my_var1 = null;
+    print("$my_var1");
+
+    ?>
+    </p>
         <h3>STRING</h3>
+        <p>
+        $string_1 = "This is a string in double quotes";<br>
+        $string_2 = "This is a somewhat longer, singly quoted string";<br>
+        $string_39 = "This string has thirty-nine characters";<br>
+        $string_0 = ""; // a string with zero characters<br>
+        EXAMPLE:<br>
+        $variable = "name";<br>
+        $literally = 'My $variable will not print!\\n';<br>
+        print($literally);<br>
+        $literally = "My $variable will print!\\n";<br>
+        print($literally);
+        <h5>OUTPUT:</h5>
+        </p>
         <?php
-        $string_1 = "This is a string in double quotes";
-        print("<br>");
-        print($string_1);
-        $string_2 = "This is a somewhat longer, singly quoted string";
-        print("<br>");
-        print($string_2);
-        $string_39 = "This string has thirty-nine characters";
-        print("<br>");
-        print($string_39);
-        print("<br>");
-        $string_0 = ""; // a string with zero characters
+        
         $variable = "name";
     $literally = 'My $variable will not print!<br> ';
         print($literally);
-        print("<br>");
+
     $literally = "My $variable will print!<br>";
         print($literally);
         print("<br>");
