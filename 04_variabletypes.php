@@ -138,10 +138,94 @@
     $literally = "My $variable will print!<br>";
         print($literally);
         print("<br>");
-
-        
-
     ?>
+    <h3>Local Variables</h3>
+   <p> $x = 4;<br>
+        function assignx () {<br>
+            $x = 0;<br>
+        print "\$x inside function is $x. ";<br>
+        }<br>
+        assignx();<br>
+        print "\$x outside of function is $x. ";<br>
+        <h5>OUTPUT:</h5>
+
+   <?php
+        $x = 4;
+        function assignx () {
+            $x = 0;
+print "\$x inside function is $x. ";
+print("<br>");
+}
+assignx();
+print "\$x outside of function is $x. ";
+?>
+</p>
+<h3>Function Parameter</h3>
+<p>// multiply a value by 10 and return it to the caller   <br>
+function multiply ($value) {<br>
+    $value = $value * 10;<br>
+    return $value;<br>
+    }<br>
+    $retval = multiply (10);<br>
+    Print "Return value is $retval\n";<br>
+    <h5>OUTPUT:</h5>
+<?php
+// multiply a value by 10 and return it to the caller
+function multiply ($value) {
+    $value = $value * 10;
+    return $value;
+    }
+    $retval = multiply (10);
+    Print "Return value is $retval\n";
+    ?>
+    </p>
+    <h3>GLobal Variables</h3>
+    <p>
+    $somevar = 15; <br>
+    function addit() {<br>
+    GLOBAL $somevar;<br>
+    $somevar++;<br>
+    print "Somevar is $somevar";<br>
+    }<br>
+    addit();<br>
+    <h5>OUTPUT:</h5>
+    <?php
+    $somevar = 15;
+    function addit() {
+    GLOBAL $somevar;
+    $somevar++;
+    print "Somevar is $somevar";
+    }
+    addit();
+    ?>
+    </p>
+    <h3>Static Variables</h3>
+    <p>function keep_track() { <br>
+        STATIC $count = 0;<br>
+        $count++;<br>
+        print $count;<br>
+        print " ";<br>
+        }<br>
+        keep_track();<br>
+        keep_track();<br>
+        keep_track();<br>
+        <h5>OUTPUT:</h5>
+    <?php
+    function keep_track() {
+    STATIC $count = 0;
+    $count++;
+    print $count;
+    print " ";
+}
+keep_track();
+keep_track();
+keep_track();
+    ?>
+    </p>
+   
+   <h3>here Documents</h3>
+   <p>
+    
     <?php
     $channel =<<<_XML_
     <channel>
@@ -160,40 +244,7 @@
         print $channel;
 
     ?>
-    <?php
-        $x = 4;
-        function assignx () {
-            $x = 0;
-print "\$x inside function is $x. ";
-}
-assignx();
-print "\$x outside of function is $x. ";
-
-// multiply a value by 10 and return it to the caller
-function multiply ($value) {
-    $value = $value * 10;
-    return $value;
-    }
-    $retval = multiply (10);
-    Print "Return value is $retval\n";
-
-    $somevar = 15;
-function addit() {
-GLOBAL $somevar;
-$somevar++;
-print "Somevar is $somevar";
-}
-addit();
-
-function keep_track() {
-    STATIC $count = 0;
-    $count++;
-    print $count;
-    print " ";
-}
-keep_track();
-keep_track();
-keep_track();
-    ?>
+    </p>
+    
 </body>
 </html>
