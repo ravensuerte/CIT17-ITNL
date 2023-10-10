@@ -31,6 +31,9 @@
     height: 300px;
     width: 300px;
   }
+  h1{
+    height: 50%;
+  }
 </style>
 <body>
   <div class="katawan">
@@ -63,9 +66,14 @@ if (isset($_POST['submit'])) {
     echo "<h1>= $result<h1>";
   }
 } ?>
+<br>
+<br>
+<h3><a href="calculator.html">Try another Calculation?</a></h3>
 </div>
 </div>
-
+<div class="another">
+  
+</div>
 
 
 
