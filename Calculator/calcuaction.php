@@ -11,8 +11,31 @@
     text-align: center;
 
   }
+  .dive{
+    height: 70px;
+    background-color: lightgray;
+    border: 2px solid black;
+    width: 150px;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    justify-content: center;
+    align-items: center;
+  }
+  .katawan{
+    position: absolute;
+    top: 10%;
+    left: 39%;
+    border: 3px;
+    background-color: gray;
+    height: 300px;
+    width: 300px;
+  }
 </style>
 <body>
+  <div class="katawan">
+    <h1>CALCULATOR</h1>
+  <div class="dive">
 <?php
 if (isset($_POST['submit'])) {
 
@@ -20,25 +43,32 @@ if (isset($_POST['submit'])) {
   $num2 = $_POST['num2'];
   $operator = $_POST['operator'];
 
-
-  if ($operator == 'add') {
+  
+  if ($operator == '+') {
     $result = $num1 + $num2;
-  } elseif ($operator == 'subtract') {
+  } elseif ($operator == '-') {
     $result = $num1 - $num2;
-  } elseif ($operator == 'multiply') {
+  } elseif ($operator == '*') {
     $result = $num1 * $num2;
-  } elseif ($operator == 'divide') {
+  } elseif ($num2 != 0) {
     $result = $num1 / $num2;
+  } elseif ($num2 == 0){
+    echo "Division by zero is not allowed.";
   }
 
   if (isset($result)) {
-    echo "<h1>Result: $result<h1>";
+    print("$num1");
+    print("$operator");
+    print("$num2");
+    echo "<h1>= $result<h1>";
   }
 } ?>
-
+</div>
+</div>
 
 
 
 
 </body>
 </html>
+
