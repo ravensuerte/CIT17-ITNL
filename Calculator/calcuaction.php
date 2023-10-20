@@ -9,7 +9,8 @@
 <style>
   body{
     text-align: center;
-
+    color: blue;
+    background-color: pink;
   }
   .dive{
     height: 70px;
@@ -71,12 +72,6 @@ if (isset($_POST['submit'])) {
 <h3><a href="calculator.html">Try another Calculation?</a></h3>
 </div>
 </div>
-<div class="another">
-  
-</div>
-
-
-
 </body>
 </html>
 
