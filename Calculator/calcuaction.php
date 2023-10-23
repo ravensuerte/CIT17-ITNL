@@ -58,6 +58,8 @@ if (isset($_POST['submit'])) {
     $result = $num1 / $num2;
   } elseif ($num2 == 0){
     echo "Division by zero is not allowed.";
+  }else{
+    print("Invalid Operator Try again");
   }
 
   if (isset($result)) {
