@@ -68,7 +68,8 @@ if (isset($_POST['submit'])) {
     print("$num2");
     echo "<h1>= $result<h1>";
   }
-} ?>
+} 
+?>
 <br>
 <br>
 <h3><a href="calculator.html">Try another Calculation?</a></h3>
