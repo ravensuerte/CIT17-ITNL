@@ -22,6 +22,7 @@
     left: 25%;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px rgba(000, 000, 000, 0.1);
   }
   .katawan{
     position: absolute;
@@ -31,10 +32,22 @@
     background-color: gray;
     height: 300px;
     width: 300px;
+    text-shadow: 5px 5px rgba(000, 000, 000, 0.1);
+    box-shadow: 5px 5px rgba(000, 000, 000, 0.1);
   }
   h1{
     height: 50%;
   }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  a:hover{
+    color: white;
+   transition: 1s;
+
+  }
+
 </style>
 <body>
   <div class="katawan">
