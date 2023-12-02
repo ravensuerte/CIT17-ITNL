@@ -3,7 +3,7 @@ include 'db_config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect user input for new enrollment
-    $enrollmentID =$_POST['enrollmentID'];
+    $enrollmentID = $_POST['enrollmentID'];
 
     
     $enrollmentDate = $_POST['enrollmentDate'];
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
     
-        <label for="enrollmentID">Student ID:</label>
+        <label for="enrollmentID">Enrollment ID:</label>
         <input type="number" name="enrollmentID" required><br>
 
 

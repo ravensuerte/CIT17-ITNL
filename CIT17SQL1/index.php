@@ -12,8 +12,24 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student List</title>
+    <style>
+        body{
+            background-color: gray;
+            text-align: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+        table{
+            margin-left: 300px;
+        }
+        a{
+            color: blue;
+        }
+    </style>
 </head>
 <body>
+    
     <h2>Student List</h2>
 
     <table border="1">
