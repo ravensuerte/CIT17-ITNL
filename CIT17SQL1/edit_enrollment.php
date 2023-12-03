@@ -10,28 +10,30 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
 
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        $enrollmentID = $row['EnrollmentID'];
+        $studentID = $row['StudentID'];
+        $courseID = $row['CourseID'];
         $enrollmentDate = $row['EnrollmentDate'];
         $grade = $row['Grade'];
     } else {
         echo "Enrollment not found";
         exit();
     }
-} 
-
-// Update enrollment information
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+} elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect user input for updated enrollment
     $enrollmentID = $_POST['enrollmentID'];
+    $studentID = $_POST['studentID'];
+    $courseID = $_POST['courseID'];
     $enrollmentDate = $_POST['enrollmentDate'];
     $grade = $_POST['grade'];
 
     // SQL query to update enrollment information
-    $updateSql = "UPDATE Enrollment SET EnrollmentID = '$enrollmentID', 
-                  EnrollmentDate = '$enrollmentDate', Grade = '$grade' 
+    $updateSql = "UPDATE Enrollment 
+                  SET StudentID = '$studentID', CourseID = '$courseID', 
+                      EnrollmentDate = '$enrollmentDate', Grade = '$grade' 
                   WHERE EnrollmentID = '$enrollmentID'";
 
     if ($conn->query($updateSql) === TRUE) {
-        header("Location: index_enrollemnt.php");
+        header("Location: index_enrollment.php");
         exit();
     } else {
         echo "Error updating record: " . $conn->error;
@@ -49,15 +51,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h2>Edit Enrollment</h2>
 
-    <form action="<?php echo $_SERVER["PHP_SELF"] . '?id=' . $enrollmentID; ?>" method="post">
-        <label for="enrollmentID">Enrollment ID:</label>
-        <input type="number" name="enrollmentID" value="<?php echo $enrollmentID; ?>" ><br>
+    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+
+        <label for="studentID">Student ID:</label>
+        <input type="number" name="studentID" value="<?php echo $studentID; ?>" required><br>
+
+        <label for="courseID">Course ID:</label>
+        <input type="number" name="courseID" value="<?php echo $courseID; ?>" required><br>
 
         <label for="enrollmentDate">Enrollment Date:</label>
         <input type="date" name="enrollmentDate" value="<?php echo $enrollmentDate; ?>" required><br>
 
         <label for="grade">Grade:</label>
-        <input type="text" name="grade" value="<?php echo $grade; ?>" required><br>
+        <input type="text" name="grade" value="<?php echo $grade; ?>"><br>
 
         <input type="submit" value="Update Enrollment">
     </form>

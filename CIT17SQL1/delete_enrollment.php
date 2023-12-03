@@ -8,13 +8,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
     $deleteSql = "DELETE FROM Enrollment WHERE EnrollmentID = '$enrollmentID'";
 
     if ($conn->query($deleteSql) === TRUE) {
-        header("Location: index_enrollemnt.php");
+        echo "Enrollment deleted successfully!";
+        header("Location: index_enrollment.php");
         exit();
     } else {
         echo "Error deleting record: " . $conn->error;
     }
-} else {
-    echo "Invalid request";
-    exit();
+
+    // Close the database connection
+    $conn->close();
 }
 ?>
