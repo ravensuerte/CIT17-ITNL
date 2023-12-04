@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Student</title>
+    <link rel="stylesheet" href="student_css/studentstyle.css">
 </head>
 <body>
     <h2>Create Student</h2>
@@ -57,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="phone">Phone:</label>
         <input type="text" name="phone"><br>
 
-        <input type="submit" value="ADD">
+        <input  type="submit" value="Add">
     </form>
 </body>
 </html>

@@ -45,7 +45,7 @@ $conn->close();
     <title>Enrollment List</title>
 </head>
 <body>
-    <a href="create_enrollment.php">Add Enrollment</a>
+    <a href="create_enrollment.php">Add Enrollment</a><br>
     <a href="index.php">Go back to student</a>
 </body>
 </html>

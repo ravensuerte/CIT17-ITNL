@@ -15,6 +15,9 @@ $result = $conn->query($sql);
 </head>
 <body>
     <h2>Student List</h2>
+    <a href="index_enrollment.php">Enrollment</a><br>
+    <a href="index_course.php">Course</a><br>
+    <a href="index_instructor.php">instructors</a>
 
     <table border="1">
         <tr>
@@ -42,9 +45,7 @@ $result = $conn->query($sql);
         ?>
     </table>
     <a href="create_student.php">Add student</a><br>
-    <a href="index_enrollment.php">Enrollment</a><br>
-    <a href="index_course.php">Course</a><br>
-    <a href="index_instructor.php">instructors</a>
+    
 
 
 </body>

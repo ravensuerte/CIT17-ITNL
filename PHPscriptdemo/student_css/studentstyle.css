@@ -1,0 +1,27 @@
+body{
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, yellow);
+    text-align: center;
+}
+label,input{
+    margin: 15px;
+}
+input{
+    width: 200px;
+    height: 20px;
+    border-radius: 25px;
+    padding: 5px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+input[type="submit"]{
+    width: 100px;
+    height: 30px;
+    padding: 0px;
+    background-color: wheat;
+}
+input[type="submit"]:hover{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    
+}
