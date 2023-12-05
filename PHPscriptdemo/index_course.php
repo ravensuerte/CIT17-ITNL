@@ -12,14 +12,14 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Read Courses</title>
-    <style>
-       
-       
-    </style>
+    <link rel="stylesheet" href="course_css/course.css">
+    
 </head>
 <body>
     <h2>Course List</h2>
-
+    <a href="index_enrollment.php">Enrollment</a><br>
+    <a href="index_student.php">Student</a><br>
+    <a href="index_instructor.php">instructors</a>
     <?php
     if ($result->num_rows > 0) {
         echo "<table border='1'>";
@@ -43,6 +43,6 @@ $result = $conn->query($sql);
     $conn->close();
     ?>
     <a href="create_course.php">add course</a>
-    <a href="index.php">go back to students</a>
+    <a href="index_student.php">go back to students</a>
 </body>
 </html>
