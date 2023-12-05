@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "Student information saved successfully!";
-        header("Location: index.php");
+        header("Location: index_student.php");
         exit();
 
     } else {
