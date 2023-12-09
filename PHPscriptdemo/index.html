@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="homepage/home.css">
+    <title>Create Tables</title>
 </head>
 <body>
-    <h1>WELCOME</h1>
-    <h1>PHPScriptdemo</h1>
-    <div>
-    <ul>
-        <li>
-            <a href="index_student.php">Student</a>
-        </li>
-        <li>
-            <a href="index_course.php">Courses</a>
-        </li>
-        <li>
-            <a href="index_enrollment.php">Enrollment</a>
-        </li>
-        <li>
-            <a href="index_instructor.php">Instructor</a>
-        </li>
-    </ul>
-</div>
+    <style>
+       .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: wheat;
+            width: 100px;
+            height: 70px;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 30px;
+        }
+        h1{
+            text-align: center;
+        }
+        a{
+            font-size: 50px;
+            text-decoration: none;
+        }
+    </style>
+    <h1>Press Ok To Continue</h1>
+    <div class="table-container"><a href="setup.php">OK</a></div>
+    
 </body>
 </html>

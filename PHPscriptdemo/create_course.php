@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "Course information saved successfully!";
-        header("Location: index_course.php");
+        header("Location: index_user.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
