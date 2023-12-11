@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["createUser"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create User</title>
-    <!-- Add Bootstrap or CSS link here -->
+    <link rel="stylesheet" href="student_css/studentstyle.css">
 </head>
 <body>
 
@@ -37,17 +37,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["createUser"])) {
 <form method="post" action="">
     <label for="username">Username:</label>
     <input type="text" name="username" required>
-
+    <br>
     <label for="password">Password:</label>
     <input type="password" name="password" required>
-
+    <br>
     <label for="userType">User Type:</label>
     <select name="userType">
         <option value="Admin">Admin</option>
         <option value="Student">Student</option>
         <option value="Instructor">Instructor</option>
     </select>
-
+    <br>
     <input type="submit" name="createUser" value="Create User">
 </form>
     <a href="index_user.php">Go back to users</a>

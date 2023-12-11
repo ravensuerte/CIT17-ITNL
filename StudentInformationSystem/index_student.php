@@ -14,6 +14,34 @@ $result = $conn->query($sql);
     <title>Read Students</title>
     <link rel="stylesheet" href="student_css/studentstyle.css">
     <style>
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+        }
         
         .table-container {
             display: flex;
@@ -21,13 +49,28 @@ $result = $conn->query($sql);
             align-items: center;
             
         }
+        .save{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px; /* Optional: Add rounded corners */
+            transition: background-color 0.3s ease;
+        }
     </style>
 </head>
 <body>
 <h2>Student List</h2>
-        <a href="index_enrollment.php">Enrollment</a><br>
-        <a href="index_course.php">Course</a><br>
-        <a href="index_instructor.php">Instructors</a>
+<nav>
+        <ul>
+            <li><a href="index_user.php">Users</a></li>
+            <li><a href="index_enrollment.php">Enrollment</a></li>
+            <li><a href="index_course.php">Course</a></li>
+            <li><a href="index_instructor.php">Instructors</a></li>
+        </ul>
+        
+</nav>
     <div class="table-container">
   
 
@@ -62,6 +105,7 @@ $result = $conn->query($sql);
         }
         ?>
     </div>
-    <a href="create_student.php">Add student</a>
+    <a class="save" href="create_student.php">Add student</a>
+    <a class="save" href="main.html">Go Back To main Menu</a>
 </body>
 </html>

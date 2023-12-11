@@ -16,10 +16,55 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="enrollment_css/enrollment.css">
 </head>
 <body>
+<style>
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+        }
+        .save{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px; /* Optional: Add rounded corners */
+            transition: background-color 0.3s ease;
+        }
+    </style>
 <h2>Enrollment List</h2>
-<a href="index_student.php">Student</a><br>
-    <a href="index_course.php">Course</a><br>
-    <a href="index_student.php">instructors</a>
+<nav>
+        <ul>
+            <li><a href="index_user.php">Users</a></li>
+            <li><a href="index_instructor.php">Instructor</a></li>
+            <li><a href="index_course.php">Course</a></li>
+            <li><a href="index_student.php">Students</a></li>
+        </ul>
+        
+</nav>
 <?php
 if ($result->num_rows > 0) {
  
@@ -52,7 +97,8 @@ if ($result->num_rows > 0) {
 // Close the database connection
 $conn->close();
 ?>
-    <a href="create_enrollment.php">Add Enrollment</a><br>
-    <a href="index_student.php">Go back to student</a>
+<br>
+    <a class="save" href="create_enrollment.php">New Enrollment</a>
+    <a class="save" href="main.html">Go Back To main Menu</a>
 </body>
 </html>

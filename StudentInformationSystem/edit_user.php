@@ -48,12 +48,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit User</title>
+    <link rel="stylesheet" href="course_css/course.css">
 </head>
 <body>
 
 <h2>Edit User</h2>
 
-<!-- Edit User Form -->
+
 <form method="post" action="">
     <label for="username">Username:</label>
     <input type="text" name="username" value="<?php echo $user['Username']; ?>" required>
@@ -68,8 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
         <option value="Instructor" <?php if ($user['UserType'] == 'Instructor') echo 'selected'; ?>>Instructor</option>
     </select>
 
-    <input type="submit" name="updateUser" value="Update User">
+    <input type="submit" name="updateUser" value="Update">
 </form>
-    <a href="main.html">go back to Main Menu</a>
+    <a href="index_user.php">go back to Users List</a>
 </body>
 </html>

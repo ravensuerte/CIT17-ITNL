@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Enrollment</title>
+    <link rel="stylesheet" href="course_css/course.css">
 </head>
 <body>
     <h2>Edit Enrollment</h2>
@@ -65,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
         <label for="grade">Grade:</label>
         <input type="text" name="grade" value="<?php echo $grade; ?>"><br>
 
-        <input type="submit" value="Update Enrollment">
+        <input type="submit" value="Update">
     </form>
 
     <br>

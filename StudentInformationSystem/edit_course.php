@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Course</title>
+    <link rel="stylesheet" href="course_css/course.css">
 </head>
 <body>
     <h2>Edit Course</h2>
@@ -56,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
         <label for="credits">Credits:</label>
         <input type="number" name="credits" value="<?php echo $credits; ?>" required><br>
 
-        <input type="submit" value="Update Course">
+        <input type="submit" value="Update">
     </form>
 
     <br>

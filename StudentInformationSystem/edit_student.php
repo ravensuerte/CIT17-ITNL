@@ -2,37 +2,40 @@
 include 'db_config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
-    $instructorID = $_GET['id'];
+    $studentID = $_GET['id'];
 
-    // SQL query to fetch instructor details by ID
-    $sql = "SELECT * FROM Instructor WHERE InstructorID = '$instructorID'";
+    // SQL query to fetch student details by ID
+    $sql = "SELECT * FROM Student WHERE StudentID = '$studentID'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         $firstName = $row['FirstName'];
         $lastName = $row['LastName'];
+        $dateOfBirth = $row['DateOfBirth'];
         $email = $row['Email'];
         $phone = $row['Phone'];
     } else {
-        echo "Instructor not found";
+        echo "Student not found";
         exit();
     }
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect user input for updated instructor
-    $instructorID = $_POST['instructorID'];
+    // Collect user input for updated student
+    $studentID = $_POST['studentID'];
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
+    $dateOfBirth = $_POST['dateOfBirth'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
 
-    // SQL query to update instructor data
-    $sql = "UPDATE Instructor 
-            SET FirstName = '$firstName', LastName = '$lastName', Email = '$email', Phone = '$phone' 
-            WHERE InstructorID = '$instructorID'";
+    // SQL query to update student data
+    $sql = "UPDATE Student 
+            SET StudentID = '$studentID', FirstName = '$firstName', LastName = '$lastName', 
+                DateOfBirth = '$dateOfBirth', Email = '$email', Phone = '$phone' 
+            WHERE StudentID = '$studentID'";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: index_instructor.php");
+        header("Location: index_student.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -45,13 +48,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Instructor</title>
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="course_css/course.css">
 </head>
 <body>
-    <h2>Edit Instructor</h2>
+    <h2>Edit Student</h2>
 
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-        <input type="hidden" name="instructorID" value="<?php echo $instructorID; ?>">
+        <label for="studentID">Student ID:</label>
+        <input type="text" name="studentID" value="<?php echo $studentID; ?>" required><br>
 
         <label for="firstName">First Name:</label>
         <input type="text" name="firstName" value="<?php echo $firstName; ?>" required><br>
@@ -59,16 +64,19 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
         <label for="lastName">Last Name:</label>
         <input type="text" name="lastName" value="<?php echo $lastName; ?>" required><br>
 
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" name="dateOfBirth" value="<?php echo $dateOfBirth; ?>" required><br>
+
         <label for="email">Email:</label>
         <input type="email" name="email" value="<?php echo $email; ?>" required><br>
 
         <label for="phone">Phone:</label>
-        <input type="text" name="phone" value="<?php echo $phone; ?>" required><br>
+        <input type="text" name="phone" value="<?php echo $phone; ?>"><br>
 
-        <input type="submit" value="Update Instructor">
+        <input type="submit" value="Update">
     </form>
 
     <br>
-    <a href="index_instructor.php">Back to Instructor List</a>
+    <a href="index_student.php">Back to Student List</a>
 </body>
 </html>
